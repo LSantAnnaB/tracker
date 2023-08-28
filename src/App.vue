@@ -1,9 +1,9 @@
 <template>
-  <main class="columns is-gapless is-multiline">
+  <main class="columns is-gapless is-multiline modo-escuro">
     <div class="colum is-one-quarter">
       <BarraLateral></BarraLateral>
     </div>
-    <div class="colum is-three-quarter">
+    <div class="colum is-three-quarter conteudo">
       <Formulario @aoSalvarTarefa="salvarTarefas"></Formulario>
       <div class="lista">
         <TarefaComponent v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" ></TarefaComponent>
@@ -42,4 +42,17 @@ export default defineComponent({
 .lista {
   padding: 1.25rem;
 }
+
+main{
+  --bg-primario: #fff;
+  --texto-primario: #000;
+}
+main{
+  --bg-primario: #202d42;
+  --texto-primario: #ddd;
+}
+.conteudo {
+  background-color: var(--bg-primario);
+}
+
 </style>
