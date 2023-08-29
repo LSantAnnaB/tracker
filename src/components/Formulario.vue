@@ -1,10 +1,10 @@
 <template>
-  <div class="box">
+  <div class="formulario" >
     <div class="columns">
-      <div class="column is-8" role="form" aria-label="Formulário para criação de uma nova tarefa">
+      <div class="columns__texto" role="form" aria-label="Formulário para criação de uma nova tarefa">
         <input 
-          type="text" 
           class="input" 
+          type="text" 
           placeholder="Qual tarefa você deseja iniciar?" 
           v-model="descricao" />
       </div>
@@ -41,3 +41,27 @@ export default defineComponent({
 });
 </script>
 
+<style scoped>
+.formulario{
+  color: var(--texto-primario);
+  background-color: var(--bg-primario);
+}
+.columns{
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.columns__texto{
+ margin-left: 10%; 
+ width: 80%;
+ align-items: center;
+}
+.input{
+  text-align: center;
+
+}
+</style>

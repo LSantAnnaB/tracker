@@ -1,5 +1,5 @@
 <template>
-  <div class="is-flex is-align-items-center is-justify-content-space-between">
+  <div class="temporizador">
     <Cronometro :tempo-em-segundos="tempoEmSegundos" />
     <button class="button" @click="iniciar" :disabled="cronometroRodando">
       <span class="icon">
@@ -48,3 +48,12 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+  .temporizador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+</style>
