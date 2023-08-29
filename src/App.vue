@@ -1,9 +1,9 @@
 <template>
-  <main class="columns is-gapless is-multiline" :class="{ 'modo-escuro': modoEscuroAtivo }">
-    <div class="colum is-one-quarter">
+  <main class="apresentacao" :class="{ 'modo-escuro': modoEscuroAtivo }">
+    <div class="apresentacao__barraLateral">
       <BarraLateral @aoTemaAlterado="trocarTema"></BarraLateral>
     </div>
-    <div class="colum is-three-quarter conteudo">
+    <div class="conteudo">
       <Formulario @aoSalvarTarefa="salvarTarefas"></Formulario>
       <div class="lista">
         <TarefaComponent v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" ></TarefaComponent>
@@ -50,13 +50,25 @@ export default defineComponent({
 main{
   --bg-primario: #fff;
   --texto-primario: #000;
+  
 }
 main.modo-escuro{
-  --bg-primario: #202d42;
-  --texto-primario: #ddd;
+  --bg-primario: #161616;
+  --texto-primario: #a30b0b;
 }
 .conteudo {
   background-color: var(--bg-primario);
 }
+
+.apresentacao{
+  margin: 2% 20% 2% 20%;
+}
+.apresentacao__barraLateral{
+display: flex;
+justify-content: center;
+padding-bottom: 5%;
+}
+
+
 
 </style>

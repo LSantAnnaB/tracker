@@ -1,8 +1,5 @@
 <template>
   <header>
-    <h1>
-      <img src="https://api.lorem.space/image" alt="img">
-    </h1>
     <button class="button" @click="alterarTema"> {{ textoBotao }}</button>
   </header>
 </template>
